@@ -1,4 +1,7 @@
 <?php
+    /**
+     * This php file is in charge of making the database connection
+     */
     $servername = "localhost";
     $dBUsername = "root";
     $dBPassword = "";

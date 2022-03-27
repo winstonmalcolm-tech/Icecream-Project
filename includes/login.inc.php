@@ -1,4 +1,7 @@
 <?php
+    /**
+     *This php file is responsible for validating login page 
+     */
     if(isset($_POST['login-submit'])){
         session_start();
         require 'dbh.inc.php';
@@ -9,6 +12,8 @@
         $_SESSION['user'] = $username;
         $_SESSION['loggedIn'] = false;
 
+        //error validation
+        //Checking for empty fields
         if(empty($username) || empty($password)){
             header("Location: ../html/login.php?error=emptyfields");
             exit();
@@ -16,8 +21,9 @@
         } 
         else{
             $sql = "SELECT * FROM users where username=?;";
-            $stmt = mysqli_stmt_init($conn);
-
+            $stmt = mysqli_stmt_init($conn); // utilizing prepared statements
+            
+            //Checking for sql errors
             if(!mysqli_stmt_prepare($stmt, $sql)){
                 header("Location: ../html/login.php?error=sqlerror");
                 exit();

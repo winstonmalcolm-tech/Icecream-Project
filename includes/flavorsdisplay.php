@@ -1,6 +1,12 @@
 <?php
     include_once 'dbh.inc.php';
 
+    /**
+     * This php file holds the card components and functions to get the flavors stored in the 
+     * database and display display them on screen
+     */
+
+    //This function is in charge of displaying orders made by the user on the cart screen
     function cartCard($name, $category, $id)
     {
         if(strcmp($category,"Icecream") === 0)
@@ -55,6 +61,7 @@
         }
     }
 
+    //This function is in charge of being a resusable card component to display data in a card format
     function card($fileext, $flavorDb, $idDb, $colorDb, $categoryDb, $priceDb)
     {
         echo ' 
@@ -75,6 +82,7 @@
             ';
     }
 
+    //This function is responsible for filtering data in the database for icecream categories to display on screen  
     function icecream($id)
     {
         $sql = "SELECT * FROM icecreamtbl WHERE category='$id';";
@@ -89,6 +97,7 @@
             $fileext = explode(".", $fileinfo[0]);
             $fileactualext = $fileext[1];
 
+            //Calling the card function and passing the data in to be displayed on the webpage
             card($fileactualext, $row['flavor'], $row['id'], $row['color'], $row['category'], $row['price']);
           }
         }
@@ -98,6 +107,7 @@
         }
     }
 
+    //This function is responsible for filtering data in the database for icecream categories to display on screen 
     function icecreamCake()
     {
         $sql = "SELECT * FROM icecreamtbl WHERE category='Icecream Cake';";
@@ -197,6 +207,7 @@
         }
     }
 
+    //This function is responsible for displaying all flavors from database
     function defaultDisplay()
     {
         $sql = "SELECT * FROM icecreamtbl;";
@@ -222,6 +233,7 @@
         }
     }
 
+    //This function is responsible for showing a model of customer's ordernumber and total price
     function staticModal($orderNumber)
     {
       echo '
