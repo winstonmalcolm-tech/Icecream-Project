@@ -1,0 +1,358 @@
+/* Index and common styles across all pages  */
+
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  height: 100%;
+}
+
+.logo {
+  width: 50px;
+}
+
+.heading{
+  text-align: center;
+  padding-top: 30px;
+  width: 50%;
+  margin: auto;
+  color: rgb(231, 60, 38);
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.category-tabs{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.category-tabs a{
+  text-decoration: none;
+}
+
+.tab{
+  background-color: #ba2ef1;
+  font-size: 18px;
+  border-radius: 30px;
+  padding: 5px;
+  color: #fff;
+}
+
+.selected{
+  color: #fff;
+  background-color:#000;
+}
+
+.category-tabs a:first-child{
+  color: #fff;
+  background-color:#000;
+}
+
+.tab:hover{
+  color: #fff;
+  background-color:#000;
+}
+
+.flavor-container, .login-container, .promotion-container, .admin-container, .cart-container{
+  min-height: 800px;
+  width: 100%;
+  background-image: linear-gradient(to bottom right, rgb(73, 209, 209), white);
+}
+
+.card-listing{
+  display: flex;
+  padding: 20px;
+  gap: 30px;
+}
+
+.individual-cards{
+  width: 250px;
+  height: 100px;
+}
+
+.individual-cards img{
+  height: 200px;
+} 
+
+.no-icecream{
+  width: 100%;
+  text-align: center;
+}
+
+.card-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-button button{
+  border: 1px solid #234af8;
+  border-radius: 5px;
+  height: 30px;
+  width: 100px;
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  background-color: #234af8;
+}
+
+.footer-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+/* -------------------- Promotion Page ---------------------- */
+
+.no-promotion{
+  max-width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.promotion-listing{
+  padding: 10px;
+  width: 400px;
+  margin: auto;
+}
+
+
+
+/* -------------------- Login Page ---------------------- */
+
+.login-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+.form-container{
+  width: 400px;
+  height: 400px;
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* -------------------- Admin Page ---------------------- */
+
+.admin-container{
+  height: 1200px;
+}
+
+.promotion-form-container{
+  background-color: #fff;
+  width: 600px;
+  min-height: 400px;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.admin-form-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.promotion-form-box{
+  text-align: center;
+  padding: 30px;
+}
+
+.form-box{
+  width: 600px;
+  height: 400px;
+  background-color: #fff;
+  margin-top: 3%;
+  padding: 10px;
+  text-align: center;
+}
+
+.promotion-form-box form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-box form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.form-box form button, .promotionbuttons button{
+  border: 1px solid #333030;
+  width: 150px;
+}
+
+
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.welcome-text{
+  width: 100%;
+  color: rgb(199, 6, 238);
+  text-align: right;
+  padding: 10px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+/* -------------------- Cart Page ---------------------- */
+.cart-container{
+  padding-top: 20px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.cart-box{
+  width: 600px;
+  min-height: 700px;
+  background: #fff;
+  margin: auto;
+  padding-top: 20px;
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+
+.order-form{
+  margin-bottom: 20px;
+
+}
+.order-form label{
+  text-align: left;
+  margin: 8px;
+}
+
+.order-form input{
+  display: inline-block;
+  text-align: right;
+  width: 50px;
+}
+
+.place_order_btn{
+  border: 1px solid #000;
+  width: 200px;
+  margin-bottom: 10px;
+} 
+
+@media screen and (max-width: 480px){
+  .flavor-container{
+    min-height: 700px;
+    overflow: scroll;
+    padding-bottom: 300px;
+  }
+
+  .card-listing{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 300px;
+  }
+
+  .login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+  }
+
+  .form-container{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(197, 190, 207);
+  }
+
+  .form-box{
+    width: 300px;
+    height: 450px;
+  }
+
+  .promotion-form-container{
+    width: 300px;
+    height: 580px;
+  }
+
+  .form-box form button{
+    width: 100px;
+  }
+
+  .buttons, .promotionbuttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .promotion-listing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    padding-top: 10px;
+  }
+
+  .category-tabs::-webkit-scrollbar{
+    display: none;
+  }
+
+  .category-tabs{
+    overflow:auto;
+    white-space: nowrap;
+    justify-content:left;
+    gap: 10px;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .cart-box{
+    width: 300px;
+  }
+
+  .left{
+    min-height: 400px;
+    width: 100%;
+  }
+
+  .cart-container{
+    padding-bottom: 50px;
+  }
+
+  .display-orders{
+    width: 100%;
+    min-height: 200px;
+  }
+}
+
+
